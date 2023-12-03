@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Studentcontroller;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 
-Route::get('/login',[Studentcontroller::class,'login']);
+Route::post('/login',[UserController::class,'login']);
